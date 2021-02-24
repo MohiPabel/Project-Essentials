@@ -6,13 +6,13 @@ CREATE TABLE Admin(
 )ENGINE = InnoDB;
 
 ----------------------------------------------------------------------------------------------
-//NOT ACCURATE
 CREATE TABLE Contact_Us (
-  Name  VARCHAR(100),
+  ID INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
   Email VARCHAR(255),
-  Query TEXT,
-  Image VARCHAR(255),
-  Query_Datetime TIMESTAMP,
+  Name VARCHAR(255),
+  Message TEXT,
+  Received_Datetime TIMESTAMP,
+
   INDEX (Name),
   INDEX (Email)
   )ENGINE = InnoDB;
@@ -30,12 +30,12 @@ CREATE TABLE Reset_Password (
   )ENGINE = InnoDB;
 
 ----------------------------------------------------------------------------------------------
-//NOT ACCURATE
+
 CREATE TABLE Teacher (
   Teacher_ID INTEGER NOT NULL PRIMARY KEY,
   Name VARCHAR(100),
   Department VARCHAR(200),
-  Email VARCHAR(255),
+  Teacher_Email VARCHAR(255),
   Password VARCHAR(255),
   Registration_Datetime TIMESTAMP,
   INDEX (Name),
@@ -73,9 +73,9 @@ CREATE TABLE Question(
   )ENGINE = InnoDB;
 
 ----------------------------------------------------------------------------------------------
-//NOT ACCURATE
 CREATE TABLE Student (
-  Student_ID INTEGER NOT NULL PRIMARY KEY,
+  Profile_ID INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Student_ID INTEGER,
   FirstName VARCHAR(50),
   LastName VARCHAR(50),
   Section CHAR(1),
@@ -86,6 +86,7 @@ CREATE TABLE Student (
   Student_Email_Status ENUM('not verified', 'verified'),
   Student_Otp INTEGER,
   Registration_Datetime TIMESTAMP,
+  INDEX (Student_ID),
   INDEX (FirstName),
   INDEX (LastName),
   INDEX (Section),
