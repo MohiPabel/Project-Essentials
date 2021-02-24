@@ -6,7 +6,7 @@ CREATE TABLE Admin(
 )ENGINE = InnoDB;
 
 ----------------------------------------------------------------------------------------------
-
+//NOT ACCURATE
 CREATE TABLE Contact_Us (
   Name  VARCHAR(100),
   Email VARCHAR(255),
@@ -30,7 +30,7 @@ CREATE TABLE Reset_Password (
   )ENGINE = InnoDB;
 
 ----------------------------------------------------------------------------------------------
-
+//NOT ACCURATE
 CREATE TABLE Teacher (
   Teacher_ID INTEGER NOT NULL PRIMARY KEY,
   Name VARCHAR(100),
@@ -73,7 +73,7 @@ CREATE TABLE Question(
   )ENGINE = InnoDB;
 
 ----------------------------------------------------------------------------------------------
-
+//NOT ACCURATE
 CREATE TABLE Student (
   Student_ID INTEGER NOT NULL PRIMARY KEY,
   FirstName VARCHAR(50),
