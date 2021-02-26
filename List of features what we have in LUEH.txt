@@ -1,0 +1,37 @@
+List of features what we have in LUEH :
+
+Admin:
+•	Admin has the full authority to control the website but before he has to login to the admin panel
+•	Admin can have the view of Contact, Teacher and Student info from his dashboard
+•	Admin can handle contact us page by getting the message and fixing the requested issue
+•	Admin can take a look at the teachers panel like- how many teachers are there or the information about all the teachers
+•	Admin can add the new teacher if he get the request via contact info
+•	Admin can find total number of students sorted by batch in student info page
+•	Admin can see if the student is verified or not and also the details of that student
+•	Admin can delete the record of the student from there
+•	Admin search any student by their ID
+
+Teacher:
+•	Teacher has to login to enter the dashboard
+•	If a teacher is not register then he need contact Admin via contact us
+•	Teacher can create question and post or draft the question
+•	Teacher can edit or delete the drafted question
+•	Teacher can take a view of the created question
+•	Teacher can also see all posted question
+•	Teacher has the option to create meeting link to conduct viva and post it
+•	Teacher can choose either Google meet or Zoom to schedule the meeting
+•	Teacher can see his all meeting link which has been created by him
+
+Student:
+•	Student have to login to enter his dashboard
+•	If a student is not registered he first need to register then login accordingly
+•	If a student forget his password then he can use the forget password option and it needs email verification
+•	Student can see the posted question once he logged in to the dashboard
+•	Student can participate the exam from there
+•	Student can able to participate in a meeting posted by the teacher
+•	Student can see all the posted question
+
+Other Features:
+•	Completely responsive website , anyone can view it from mobile, tab or any other devices
+•	All the passwords are secured and encrypted
+•	User friendly UI and easy to use
