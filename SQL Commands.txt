@@ -1,3 +1,19 @@
+--------New Table Code------------
+
+CREATE TABLE Question2(
+Summer_ID INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+Question_Description_ID INTEGER,
+Content TEXT,
+
+CONSTRAINT FOREIGN KEY (Question_Description_ID)
+REFERENCES Question_Description (Question_Description_ID)
+ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE = InnoDB;
+
+-----------------------------------------------
+
+
+
 CREATE TABLE Admin(
  Admin_ID INTEGER NOT NULL PRIMARY KEY,
  Admin_Eamil VARCHAR(255),
@@ -75,7 +91,7 @@ CREATE TABLE Question(
 ----------------------------------------------------------------------------------------------
 CREATE TABLE Student (
   Profile_ID INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  Student_ID INTEGER,
+  Student_ID INTEGER(11),
   FirstName VARCHAR(50),
   LastName VARCHAR(50),
   Section CHAR(1),
