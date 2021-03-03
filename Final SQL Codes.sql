@@ -98,7 +98,7 @@ CREATE TABLE Student_Answer (
   Section CHAR(1),
   Batch INTEGER,
   Submission_Datetime TIMESTAMP,
-  Score INT NULL,
+  Score VARCHAR(11) NULL,
 
   CONSTRAINT FOREIGN KEY (Question_Description_ID)
   REFERENCES Question_Description (Question_Description_ID)
