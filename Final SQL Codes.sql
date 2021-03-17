@@ -104,3 +104,51 @@ CREATE TABLE Student_Answer (
   REFERENCES Question_Description (Question_Description_ID)
   ON DELETE NO ACTION ON UPDATE NO ACTION
   )ENGINE = InnoDB;
+
+----------------------------------------------------------------------------------------------
+Tables for quiz feature
+----------------------------------------------------------------------------------------------
+
+CREATE TABLE Quiz_Question(
+ ID INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ Question_Description_ID INTEGER,
+ Question_Number INTEGER,
+ Question VARCHAR(255),
+ Choice1 VARCHAR(255),
+ Choice2 VARCHAR(255),
+ Choice3 VARCHAR(255),
+ Answer  VARCHAR(255),
+
+ INDEX (Question_Number),
+
+ CONSTRAINT FOREIGN KEY (Question_Description_ID)
+  REFERENCES Question_Description (Question_Description_ID)
+  ON DELETE CASCADE ON UPDATE CASCADE
+
+)ENGINE = InnoDB;
+
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+
+CREATE TABLE Quiz_Answer(
+ Answer_ID INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ Question_Description_ID INTEGER,
+ Last_ID INTEGER,
+ Answer VARCHAR(255),
+ Score INTEGER,
+ Student_ID INTEGER(11),
+ Full_Name VARCHAR(100),
+ Section CHAR(1),
+ Batch INTEGER(11),
+ Submission_Datetime TIMESTAMP,
+
+ CONSTRAINT FOREIGN KEY (Question_Description_ID)
+  REFERENCES Question_Description (Question_Description_ID)
+  ON DELETE CASCADE ON UPDATE CASCADE,
+ CONSTRAINT FOREIGN KEY (Last_ID)
+  REFERENCES Quiz_Question (ID)
+  ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE = InnoDB;
+
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
